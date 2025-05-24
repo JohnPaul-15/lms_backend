@@ -1,0 +1,11 @@
+{
+  "build": {
+    "commands": [
+      "mkdir -p bootstrap/cache storage/framework/{sessions,views,cache}",
+      "chmod -R 775 storage bootstrap/cache",
+      "composer dump-autoload",
+      "composer install --no-interaction --optimize-autoloader --no-dev",
+      "php artisan package:discover"
+    ]
+  }
+}
